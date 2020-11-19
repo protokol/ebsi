@@ -30,3 +30,6 @@ jobs:
 
             - name: NOTARIZATION-CRYPTO
               run: cd packages/notarization-crypto && yarn test:unit:coverage --coverageDirectory .coverage/unit-notarization-crypto --maxWorkers=2
+
+            - name: NOTARIZATION-TRANSACTIONS
+              run: cd packages/notarization-transactions && yarn test:unit:coverage --coverageDirectory .coverage/unit-notarization-transactions --maxWorkers=2
