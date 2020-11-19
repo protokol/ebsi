@@ -1,0 +1,32 @@
+name: UNIT-TESTS
+
+on:
+    push:
+        branches:
+            - "master"
+            - "develop"
+    pull_request:
+        types: [ready_for_review, synchronize, opened]
+
+jobs:
+    unit:
+        name: UNIT (API, CRYPTO, TRANSACTIONS)
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [12.x]
+
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+
+            - name: Install And Build
+              run: yarn && yarn build
+
+            - name: NOTARIZATION-CRYPTO
+              run: cd packages/notarization-crypto && yarn test:unit:coverage --coverageDirectory .coverage/unit-notarization-crypto --maxWorkers=2
