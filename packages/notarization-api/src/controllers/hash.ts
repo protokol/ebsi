@@ -20,6 +20,6 @@ export class HashesController extends Controller {
 			return Boom.notFound("Hash not found");
 		}
 
-		return { data: hash };
+		return hash;
 	}
 }

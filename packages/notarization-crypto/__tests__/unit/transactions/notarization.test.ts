@@ -4,7 +4,6 @@ import { passphrases } from "@arkecosystem/core-test-framework";
 import { Managers, Transactions } from "@arkecosystem/crypto";
 
 import { NotarizationBuilder } from "../../../src/builders";
-import { INotarizationAsset } from "../../../src/interfaces";
 import { NotarizationTransaction } from "../../../src/transactions";
 
 const notarization = {

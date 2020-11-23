@@ -56,7 +56,7 @@ describe("Test hash controller", () => {
 
 		const response = (await hashesController.show(request, undefined)) as ItemResponse;
 
-		expect(response.data).toStrictEqual(hashes[0]!);
+		expect(response).toStrictEqual(hashes[0]!);
 	});
 
 	it("show - should return 404 if group does not exist", async () => {

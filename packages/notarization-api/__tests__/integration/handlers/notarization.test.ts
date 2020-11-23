@@ -42,7 +42,7 @@ describe("API - Hashes", () => {
 			const response = await api.request("GET", `timestamp/v1/hashes/${hashes[0]!.hash}`);
 
 			expect(response).toBeSuccessfulResponse();
-			expect(response.data.data).toStrictEqual(hashes[0]!);
+			expect(response.data).toStrictEqual(hashes[0]!);
 		});
 
 		it("should fail to GET a hash by id if it doesn't exist", async () => {
