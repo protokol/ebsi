@@ -146,6 +146,7 @@ describe("Notarization tests", () => {
 
     describe("apply tests", () => {
         it("should test apply method", async () => {
+            console.log(actual.timestamp);
             await expect(handler.apply(actual)).toResolve();
             expect(await notarizationCache.has(notarizationAsset.hash)).toBeTrue();
             expect(await notarizationCache.get(notarizationAsset.hash)).toStrictEqual({
