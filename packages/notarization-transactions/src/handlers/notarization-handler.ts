@@ -67,7 +67,7 @@ export class NotarizationTransactionHandler extends Handlers.TransactionHandler 
             AppUtils.assert.defined<NotarizationInterfaces.INotarizationAsset>(transaction.asset?.notarization);
 
             const { hash }: NotarizationInterfaces.INotarizationAsset = transaction.asset.notarization;
-            this.notarizationCache.put(hash, this.buildNotarization(hash, transaction), -1);
+            this.notarizationCache.put(hash, this.buildNotarization(hash, transaction.timestamp), -1);
         }
     }
 
@@ -101,7 +101,7 @@ export class NotarizationTransactionHandler extends Handlers.TransactionHandler 
         // AppUtils.assert.defined<NotarizationInterfaces.INotarizationAsset>(transaction.data.asset?.notarization);
 
         const { hash }: NotarizationInterfaces.INotarizationAsset = transaction.data.asset!.notarization;
-        this.notarizationCache.put(hash, this.buildNotarization(hash, transaction.data), -1);
+        this.notarizationCache.put(hash, this.buildNotarization(hash, transaction.timestamp), -1);
     }
 
     public async revert(transaction: Interfaces.ITransaction): Promise<void> {
@@ -122,7 +122,7 @@ export class NotarizationTransactionHandler extends Handlers.TransactionHandler 
         };
     }
 
-    private buildNotarization(hash: string, txData: Interfaces.ITransactionData): INotarization {
-        return { hash, timestamp: txData.timestamp };
+    private buildNotarization(hash: string, timestamp: number): INotarization {
+        return { hash, timestamp };
     }
 }
