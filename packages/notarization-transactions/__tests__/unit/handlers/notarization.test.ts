@@ -7,11 +7,11 @@ import { Handlers } from "@arkecosystem/core-transactions";
 import { Interfaces, Transactions, Utils } from "@arkecosystem/crypto";
 import { Builders, Enums } from "@protokol/notarization-crypto";
 
-import { buildWallet, initApp, transactionHistoryService } from "../__support__/app";
 import { FeeType } from "../../../src/enums";
 import { StaticFeeMismatchError } from "../../../src/errors";
 import { NotarizationApplicationEvents } from "../../../src/events";
 import { INotarization } from "../../../src/interfaces";
+import { blockHistoryService, buildWallet, initApp, transactionHistoryService } from "../__support__/app";
 import { deregisterTransactions } from "../utils/utils";
 
 let app: Application;
@@ -72,15 +72,19 @@ afterEach(() => {
 describe("Notarization tests", () => {
     describe("bootstrap tests", () => {
         it("should test bootstrap method", async () => {
+            const timestamp = 100;
             transactionHistoryService.streamByCriteria.mockImplementationOnce(async function* () {
-                yield actual.data;
+                for (let i = 0; i < 2; i++) {
+                    yield { ...actual.data, blockId: 5 };
+                }
             });
+            blockHistoryService.findOneByCriteria.mockImplementationOnce(() => ({ timestamp }));
 
             await expect(handler.bootstrap()).toResolve();
             expect(await notarizationCache.has(notarizationAsset.hash)).toBeTrue();
             expect(await notarizationCache.get(notarizationAsset.hash)).toStrictEqual({
                 ...notarizationAsset,
-                timestamp: actual.timestamp,
+                timestamp,
             });
         });
 
@@ -146,12 +150,12 @@ describe("Notarization tests", () => {
 
     describe("apply tests", () => {
         it("should test apply method", async () => {
-            console.log(actual.timestamp);
-            await expect(handler.apply(actual)).toResolve();
+            const timestamp = 100;
+            await expect(handler.apply({ ...actual, timestamp })).toResolve();
             expect(await notarizationCache.has(notarizationAsset.hash)).toBeTrue();
             expect(await notarizationCache.get(notarizationAsset.hash)).toStrictEqual({
                 ...notarizationAsset,
-                timestamp: actual.timestamp,
+                timestamp,
             });
             expect(await handler.isActivated()).toBeTrue();
         });

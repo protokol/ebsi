@@ -17,8 +17,8 @@ import {
 import { Handlers } from "@arkecosystem/core-transactions";
 import { Identities, Managers, Utils } from "@arkecosystem/crypto";
 
-import { transactionRepository } from "../__mocks__/transaction-repository";
 import { NotarizationTransactionHandler } from "../../../src/handlers";
+import { transactionRepository } from "../__mocks__/transaction-repository";
 
 const logger = {
     notice: jest.fn(),
@@ -31,6 +31,10 @@ export const transactionHistoryService = {
     findOneByCriteria: jest.fn(),
     streamByCriteria: jest.fn(),
     listByCriteria: jest.fn(),
+};
+
+export const blockHistoryService = {
+    findOneByCriteria: jest.fn(),
 };
 
 export const initApp = (): Application => {
@@ -152,6 +156,7 @@ export const initApp = (): Application => {
     transactionHistoryService.findOneByCriteria.mockReset();
     transactionHistoryService.streamByCriteria.mockReset();
     app.bind(Container.Identifiers.TransactionHistoryService).toConstantValue(transactionHistoryService);
+    app.bind(Container.Identifiers.BlockHistoryService).toConstantValue(blockHistoryService);
 
     app.bind(Container.Identifiers.TransactionHandler).to(NotarizationTransactionHandler);
 

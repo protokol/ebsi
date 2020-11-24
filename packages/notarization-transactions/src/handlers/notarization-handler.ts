@@ -17,6 +17,9 @@ export class NotarizationTransactionHandler extends Handlers.TransactionHandler 
     @Container.inject(Container.Identifiers.TransactionHistoryService)
     protected readonly transactionHistoryService!: Contracts.Shared.TransactionHistoryService;
 
+    @Container.inject(Container.Identifiers.BlockHistoryService)
+    private readonly blockHistoryService!: Contracts.Shared.BlockHistoryService;
+
     @Container.inject(Container.Identifiers.TransactionPoolQuery)
     protected readonly poolQuery!: Contracts.TransactionPool.Query;
 
@@ -63,11 +66,18 @@ export class NotarizationTransactionHandler extends Handlers.TransactionHandler 
     }
 
     public async bootstrap(): Promise<void> {
+        const blocks = {};
         for await (const transaction of this.transactionHistoryService.streamByCriteria(this.getDefaultCriteria())) {
             AppUtils.assert.defined<NotarizationInterfaces.INotarizationAsset>(transaction.asset?.notarization);
 
+            if (!blocks[transaction.blockId!]) {
+                blocks[transaction.blockId!] = (await this.blockHistoryService.findOneByCriteria({
+                    id: transaction.blockId,
+                }))!.timestamp;
+            }
+
             const { hash }: NotarizationInterfaces.INotarizationAsset = transaction.asset.notarization;
-            this.notarizationCache.put(hash, this.buildNotarization(hash, transaction.timestamp), -1);
+            await this.notarizationCache.put(hash, this.buildNotarization(hash, blocks[transaction.blockId!]), -1);
         }
     }
 
@@ -101,14 +111,14 @@ export class NotarizationTransactionHandler extends Handlers.TransactionHandler 
         // AppUtils.assert.defined<NotarizationInterfaces.INotarizationAsset>(transaction.data.asset?.notarization);
 
         const { hash }: NotarizationInterfaces.INotarizationAsset = transaction.data.asset!.notarization;
-        this.notarizationCache.put(hash, this.buildNotarization(hash, transaction.timestamp), -1);
+        await this.notarizationCache.put(hash, this.buildNotarization(hash, transaction.timestamp), -1);
     }
 
     public async revert(transaction: Interfaces.ITransaction): Promise<void> {
         await super.revert(transaction);
 
         const notarizationAsset: NotarizationInterfaces.INotarizationAsset = transaction.data.asset!.notarization;
-        this.notarizationCache.forget(notarizationAsset.hash);
+        await this.notarizationCache.forget(notarizationAsset.hash);
     }
 
     public async applyToRecipient(transaction: Interfaces.ITransaction): Promise<void> {}
