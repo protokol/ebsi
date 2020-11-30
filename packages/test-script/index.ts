@@ -10,7 +10,7 @@ import { finalConfig, privKey, testParams } from "./config";
 
 const { url, env } = finalConfig;
 const request = supertest(url);
-const MAX_PROMISE_TIMEOUT = 10000; // 10000 ms = 10 s
+const MAX_PROMISE_TIMEOUT = (9000 * testParams.file_nb) / 150; // there are 150 transactions per block, wait for all of them to be confirmed
 
 function createRandomFile(name, size = 1024, writeFile = true) {
 	const data = randomBytes(size);
@@ -95,7 +95,7 @@ function checkHashes(ans) {
 	let result = "";
 	let prevDate = 0;
 	ans.forEach((r) => {
-		if (r === null) {
+		if (!r?.timestamp) {
 			result = "Error - did not received answer from Timestamp API\n";
 		} // check timestamp ordering:
 		else {
@@ -128,7 +128,7 @@ async function phase1Scripts(deleteFiles) {
 	let i = 0;
 	for (i = 0; i < testParams.file_nb; i += 1) {
 		const fsize = testParams.min_size + Math.round(Math.random() * (testParams.max_size - testParams.min_size));
-		const fname = new Date().getTime().toString();
+		const fname = new Date().getTime().toString() + i;
 		filesList.push(createRandomFile(fname, fsize * 1024));
 		fileNames.push(fname);
 	}
