@@ -1,0 +1,14 @@
+# js
+node_modules/
+build/
+log/
+package-lock.json
+
+# Windows image file caches
+Thumbs.db
+
+# misc
+.env
+
+# Generated files
+testReport.txt
