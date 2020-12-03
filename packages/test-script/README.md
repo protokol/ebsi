@@ -23,8 +23,8 @@ The testing script generates a bunch of random small files and sends their hash 
 
 ### Prerequisites
 
-- Node.js
-- Yarn
+-   Node.js
+-   Yarn
 
 ### Installing
 
@@ -34,20 +34,31 @@ Move to the base directory (example: `ebsi-repo`)
 cd ebsi-repo
 ```
 
-Clone the repository and move to the project directory
+Clone the repository and move to the root
 
 ```sh
-git clone https://ec.europa.eu/cefdigital/code/scm/ebsi/test-scripts-blockchain-protocols.git
-cd test-scripts-blockchain-protocols
+git clone git@github.com:protokol/ebsi.git
+cd ebsi
 ```
 
 ### Install dependencies
 
-Install dependencies from the project directory
+Install dependencies from the project directory and build project
 
 ```sh
 yarn install
+yarn build
 ```
+
+### Move to the folder with test script
+
+```sh
+cd packages/test-script
+```
+
+### Setup .env file
+
+Setup .env file based on .example.env
 
 ### Configuration
 
@@ -75,9 +86,9 @@ The 'url' parameter is used to access the EBSI API.
 
 The scripts are run in the function 'phase1Scripts()' (of index.js). In order to adapt the script to another blockchain protocol, one will need to change:
 
-- The base url in config.js
-- The login to EBSI ledger, done in 'besuLogin()' function.
-- The sending of the hash to the ledger, done in 'notarizeHash()', using Besu API
+-   The base url in config.js
+-   The login to EBSI ledger, done in 'besuLogin()' function.
+-   The sending of the hash to the ledger, done in 'notarizeHash()', using Besu API
 
 The protocol should implement the Timestamp API. This API is called in the 'checkHash()' function.
 
@@ -90,7 +101,7 @@ N.b. With the EBSI V1 Besu ledger, the credential token generated in the 'besuLo
 To launch the scripts, run the below command in the terminal:
 
 ```sh
-node index.js
+yarn run-script
 ```
 
 ## Licensing
@@ -100,6 +111,6 @@ Licensed under the EUPL, Version 1.2 or - as soon they will be approved by the E
 You may not use this work except in compliance with the Licence.
 You may obtain a copy of the Licence at:
 
-- https://joinup.ec.europa.eu/page/eupl-text-11-12
+-   https://joinup.ec.europa.eu/page/eupl-text-11-12
 
 Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the Licence for the specific language governing permissions and limitations under the Licence.
