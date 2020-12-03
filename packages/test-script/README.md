@@ -50,6 +50,26 @@ yarn install
 yarn build
 ```
 
+### Optional - Spin local testnet
+
+To run local database you need to install
+
+-   Docker
+-   Docker-Compose
+
+Go to the project's root (ebsi) and run docker command
+
+```sh
+cd docker/development/testnet
+docker-compose up postgres
+```
+
+Run local Ark node
+
+```sh
+yarn full:testnet
+```
+
 ### Move to the folder with test script
 
 ```sh
