@@ -54,7 +54,7 @@ describe("Test hash controller", () => {
 			},
 		};
 
-		const response = (await hashesController.show(request, undefined)) as ItemResponse;
+		const response = (await hashesController.show(request, undefined)) as Interfaces.INotarization;
 
 		expect(response).toStrictEqual(hashes[0]!);
 	});
