@@ -10,7 +10,6 @@ import { finalConfig, privKey, testParams } from "./config";
 
 const { url, env } = finalConfig;
 const request = supertest(url);
-const MAX_PROMISE_TIMEOUT = (9000 * testParams.file_nb) / 150; // there are 150 transactions per block, wait for all of them to be confirmed
 
 function createRandomFile(name, size = 1024, writeFile = true) {
 	const data = randomBytes(size);
@@ -112,6 +111,8 @@ function checkHashes(ans) {
 async function phase1Scripts(deleteFiles) {
 	console.warn("running test scripts for protocol testing phase 1...");
 	const height = (await request.get("blockchain")).body.data.block.height;
+	const txPerBlock = (await request.get("node/configuration")).body.data.constants.block.maxTransactions;
+	const MAX_PROMISE_TIMEOUT = 9000 * Math.ceil(testParams.file_nb / txPerBlock); // there are "txPerBlock" transactions per block, wait for all of them to be confirmed
 
 	ARKCrypto.Managers.configManager.setFromPreset(env);
 	ARKCrypto.Managers.configManager.setHeight(Number(height));
