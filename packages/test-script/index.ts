@@ -36,13 +36,18 @@ async function checkHash(h) {
 	return getData(`timestamp/v1/hashes/${hash}`);
 }
 
-async function notarizeHash(hsh, nonce, wif) {
-	const sgnTx = new Builders.NotarizationBuilder()
+function constructNotarizeHashTx(hsh, nonce, wif) {
+	return new Builders.NotarizationBuilder()
 		.Notarization({ hash: hsh.replace("0x", "") })
 		.nonce(nonce)
-		.signWithWif(wif);
+		.signWithWif(wif)
+		.build()
+		.toJson();
+}
+
+async function notarizeHashes(transactions) {
 	try {
-		const response = await request.post("transactions").send({ transactions: [sgnTx.build().toJson()] });
+		const response = await request.post("transactions").send({ transactions });
 		if (response.status === 200 && response.body.data.accept.length) {
 			return true;
 		}
@@ -112,6 +117,7 @@ async function phase1Scripts(deleteFiles) {
 	console.warn("running test scripts for protocol testing phase 1...");
 	const height = (await request.get("blockchain")).body.data.block.height;
 	const txPerBlock = (await request.get("node/configuration")).body.data.constants.block.maxTransactions;
+	const MAX_TX_PER_REQUEST = 40;
 	const MAX_PROMISE_TIMEOUT = 9000 * Math.ceil(testParams.file_nb / txPerBlock); // there are "txPerBlock" transactions per block, wait for all of them to be confirmed
 
 	ARKCrypto.Managers.configManager.setFromPreset(env);
@@ -139,10 +145,14 @@ async function phase1Scripts(deleteFiles) {
 	let nextStep = 0;
 	let results: any = [];
 	for (i = 0; i < testParams.file_nb; i += 1) {
-		results.push(notarizeHash(filesList[i].hash, nonce + i, wif));
+		results.push(constructNotarizeHashTx(filesList[i].hash, nonce + i, wif));
+		if (results.length === MAX_TX_PER_REQUEST || i === testParams.file_nb - 1) {
+			await notarizeHashes(results);
+			results = [];
+		}
 		nextStep = displayProgress(i, testParams.file_nb, nextStep, "processing files...");
 	}
-	await Promise.all(results);
+
 	let endDate = new Date().getTime();
 	const wDuration = endDate - startDate;
 	if (wDuration > testParams.time_out) {
