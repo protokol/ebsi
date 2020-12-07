@@ -36,14 +36,14 @@ const buildNotarizationTx = (asset?, nonce?, fee?) =>
     new Builders.NotarizationBuilder()
         .Notarization(asset || notarizationAsset)
         .nonce(nonce || "1")
-        .sign(passphrases[0])
+        .sign(passphrases[0]!)
         .fee(fee || Enums.NotarizationStaticFees.Notarization)
         .build();
 
 beforeEach(() => {
     app = initApp();
 
-    senderWallet = buildWallet(app, passphrases[0]);
+    senderWallet = buildWallet(app, passphrases[0]!);
 
     walletRepository = app.get<Wallets.WalletRepository>(Container.Identifiers.WalletRepository);
 
