@@ -2832,7 +2832,7 @@ __metadata:
     eslint-plugin-prettier: ^3.1.4
     jest: ~26.6.3
     jest-extended: ~0.11.5
-    prettier: 2.2.0
+    prettier: 2.2.1
     rimraf: ^3.0.2
     ts-jest: ~26.4.4
     typedoc: ~0.19.2
@@ -11275,16 +11275,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.2.0":
-  version: 2.2.0
-  resolution: "prettier@npm:2.2.0"
-  bin:
-    prettier: bin-prettier.js
-  checksum: fe7e2ac725d3b067204700c5fcee415a90e1c1ab01735a7748bce791db61a3242939a032bfe5f8faa2c054571f4e9bac266b766e483648511af72f69fb041a6c
-  languageName: node
-  linkType: hard
-
-"prettier@npm:^2.1.2, prettier@npm:^2.2.0":
+"prettier@npm:2.2.1, prettier@npm:^2.1.2, prettier@npm:^2.2.0":
   version: 2.2.1
   resolution: "prettier@npm:2.2.1"
   bin:
