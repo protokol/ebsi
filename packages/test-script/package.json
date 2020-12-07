@@ -27,6 +27,6 @@
 		"@protokol/notarization-crypto": "workspace:packages/notarization-crypto",
 		"dotenv": "^8.2.0",
 		"ethers": "^5.0.17",
-		"supertest": "^5.0.0"
+		"supertest": "^6.0.0"
 	}
 }

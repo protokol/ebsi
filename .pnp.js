@@ -13063,7 +13063,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ethers", "npm:5.0.23"],
             ["prettier", "npm:2.2.1"],
             ["rimraf", "npm:3.0.2"],
-            ["supertest", "npm:5.0.0"],
+            ["supertest", "npm:6.0.1"],
             ["typescript", "patch:typescript@npm%3A4.1.2#builtin<compat/typescript>::version=4.1.2&hash=cc6730"]
           ],
           "linkType": "SOFT",
@@ -14694,10 +14694,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["supertest", [
-        ["npm:5.0.0", {
-          "packageLocation": "./.yarn/cache/supertest-npm-5.0.0-e8317009b9-b4863c4627.zip/node_modules/supertest/",
+        ["npm:6.0.1", {
+          "packageLocation": "./.yarn/cache/supertest-npm-6.0.1-8d175aec56-6083017645.zip/node_modules/supertest/",
           "packageDependencies": [
-            ["supertest", "npm:5.0.0"],
+            ["supertest", "npm:6.0.1"],
             ["methods", "npm:1.1.2"],
             ["superagent", "npm:6.1.0"]
           ],
