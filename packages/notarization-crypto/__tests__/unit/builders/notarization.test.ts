@@ -17,7 +17,7 @@ describe("Notarization tests", () => {
         Transactions.TransactionRegistry.registerTransactionType(NotarizationTransaction);
 
         it("should verify correctly", () => {
-            const actual = new NotarizationBuilder().Notarization(notarization).nonce("1").sign(passphrases[0]);
+            const actual = new NotarizationBuilder().Notarization(notarization).nonce("1").sign(passphrases[0]!);
 
             expect(actual.build().verified).toBeTrue();
             expect(actual.verify()).toBeTrue();

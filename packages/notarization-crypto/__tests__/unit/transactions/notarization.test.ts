@@ -20,7 +20,7 @@ describe("Notarization tests", () => {
             const actual = new NotarizationBuilder()
                 .Notarization(notarization)
                 .nonce("1")
-                .sign(passphrases[0])
+                .sign(passphrases[0]!)
                 .getStruct();
 
             const serialized = Transactions.TransactionFactory.fromData(actual).serialized.toString("hex");
@@ -33,7 +33,7 @@ describe("Notarization tests", () => {
             const actual = new NotarizationBuilder().Notarization(notarization).nonce("3");
 
             actual.data.asset = undefined;
-            expect(() => actual.sign(passphrases[0])).toThrow();
+            expect(() => actual.sign(passphrases[0]!)).toThrow();
         });
     });
 });

@@ -19,7 +19,7 @@ describe("Notarization functional tests - Signed with one Passphrase", () => {
         // Save notarization
         const notarization = NotarizationTransactionFactory.initialize(app)
             .Notarization(notarizationAsset)
-            .withPassphrase(passphrases[0])
+            .withPassphrase(passphrases[0]!)
             .createOne();
 
         await expect(notarization).toBeAccepted();

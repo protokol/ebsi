@@ -162,7 +162,7 @@ async function phase1Scripts(deleteFiles) {
 	// 3.1 Delete files
 	if (deleteFiles) {
 		for (i = 0; i < testParams.file_nb; i += 1) {
-			unlinkSync(fileNames[i]);
+			unlinkSync(fileNames[i]!);
 		}
 	}
 
