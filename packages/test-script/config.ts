@@ -25,7 +25,6 @@ const config = {
 	local: {
 		url: process.env.EBSI_API,
 		besuRPCNode: "https://www.intebsi.xyz/jsonrpc",
-		env: "testnet",
 	},
 };
 

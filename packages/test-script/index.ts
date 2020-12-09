@@ -8,8 +8,7 @@ import supertest from "supertest";
 /* eslint no-console: ["error", { allow: ["warn", "error"] }] */
 import { finalConfig, privKey, testParams } from "./config";
 
-const { url, env } = finalConfig;
-const request = supertest(url);
+const request = supertest(finalConfig.url);
 
 function createRandomFile(name, size = 1024, writeFile = true) {
 	const data = randomBytes(size);
@@ -116,11 +115,12 @@ function checkHashes(ans) {
 async function phase1Scripts(deleteFiles) {
 	console.warn("running test scripts for protocol testing phase 1...");
 	const height = (await request.get("blockchain")).body.data.block.height;
+	const config = (await request.get("node/configuration/crypto")).body.data;
 	const txPerBlock = (await request.get("node/configuration")).body.data.constants.block.maxTransactions;
 	const MAX_TX_PER_REQUEST = 40;
 	const MAX_PROMISE_TIMEOUT = 9000 * Math.ceil(testParams.file_nb / txPerBlock); // there are "txPerBlock" transactions per block, wait for all of them to be confirmed
 
-	ARKCrypto.Managers.configManager.setFromPreset(env);
+	ARKCrypto.Managers.configManager.setConfig(config);
 	ARKCrypto.Managers.configManager.setHeight(Number(height));
 	ARKCrypto.Transactions.TransactionRegistry.registerTransactionType(Transactions.NotarizationTransaction);
 
