@@ -1,5 +1,5 @@
-import { Identities } from "@arkecosystem/crypto";
-import { ARKCrypto, Builders, Transactions } from "@protokol/notarization-crypto";
+import { Identities, Managers, Transactions } from "@arkecosystem/crypto";
+import { Builders, Transactions as EbsiTransactions } from "@protokol/notarization-crypto";
 import { randomBytes } from "crypto";
 import { utils } from "ethers";
 import { unlinkSync, writeFile as _writeFile, writeFileSync } from "fs";
@@ -120,9 +120,9 @@ async function phase1Scripts(deleteFiles) {
 	const MAX_TX_PER_REQUEST = 40;
 	const MAX_PROMISE_TIMEOUT = 9000 * Math.ceil(testParams.file_nb / txPerBlock); // there are "txPerBlock" transactions per block, wait for all of them to be confirmed
 
-	ARKCrypto.Managers.configManager.setConfig(config);
-	ARKCrypto.Managers.configManager.setHeight(Number(height));
-	ARKCrypto.Transactions.TransactionRegistry.registerTransactionType(Transactions.NotarizationTransaction);
+	Managers.configManager.setConfig(config);
+	Managers.configManager.setHeight(Number(height));
+	Transactions.TransactionRegistry.registerTransactionType(EbsiTransactions.NotarizationTransaction);
 
 	const wif = Identities.WIF.fromKeys(Identities.Keys.fromPrivateKey(privKey));
 	const address = Identities.Address.fromWIF(wif);
