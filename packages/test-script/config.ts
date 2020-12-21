@@ -6,20 +6,21 @@ const testParams = {
 	min_size: 10, // 10 kb
 	max_size: 500, // 500kb
 	delete_files: true,
+	write_files: true,
 	time_out: 1800000, // 30 minutes, maximum running time of the script in milliseconds
 };
 
 const config = {
 	production: {
-		url: "https://api.ebsi.tech.ec.europa.eu",
+		url: "https://ebsi-devnet.protokol.cloud/api",
 		besuRPCNode: "https://www.ebsi.xyz/jsonrpc",
 	},
 	development: {
-		url: "https://api.ebsi.xyz",
+		url: "https://ebsi-devnet.protokol.cloud/api",
 		besuRPCNode: "https://www.intebsi.xyz/jsonrpc",
 	},
 	integration: {
-		url: "https://api.intebsi.xyz",
+		url: "https://ebsi-devnet.protokol.cloud/api",
 		besuRPCNode: "https://www.intebsi.xyz/jsonrpc",
 	},
 	local: {

@@ -112,7 +112,7 @@ function checkHashes(ans) {
 	return result;
 }
 
-async function phase1Scripts(deleteFiles) {
+async function phase1Scripts(deleteFiles, writeFiles) {
 	console.warn("running test scripts for protocol testing phase 1...");
 	const height = (await request.get("blockchain")).body.data.block.height;
 	const config = (await request.get("node/configuration/crypto")).body.data;
@@ -136,7 +136,7 @@ async function phase1Scripts(deleteFiles) {
 	for (i = 0; i < testParams.file_nb; i += 1) {
 		const fsize = testParams.min_size + Math.round(Math.random() * (testParams.max_size - testParams.min_size));
 		const fname = new Date().getTime().toString() + i;
-		filesList.push(createRandomFile(fname, fsize * 1024));
+		filesList.push(createRandomFile(fname, fsize * 1024, writeFiles));
 		fileNames.push(fname);
 	}
 	// 3. Notarize hashes
@@ -148,6 +148,7 @@ async function phase1Scripts(deleteFiles) {
 		results.push(constructNotarizeHashTx(filesList[i].hash, nonce + i, wif));
 		if (results.length === MAX_TX_PER_REQUEST || i === testParams.file_nb - 1) {
 			await notarizeHashes(results);
+			await new Promise((r) => setTimeout(r, 800));
 			results = [];
 		}
 		nextStep = displayProgress(i, testParams.file_nb, nextStep, "processing files...");
@@ -160,25 +161,29 @@ async function phase1Scripts(deleteFiles) {
 		testReport += "ERROR - Protocol Writing Time is too big\n";
 	}
 	// 3.1 Delete files
-	if (deleteFiles) {
+	if (writeFiles && deleteFiles) {
 		for (i = 0; i < testParams.file_nb; i += 1) {
 			unlinkSync(fileNames[i]!);
 		}
 	}
 
-	await new Promise((r) => setTimeout(r, MAX_PROMISE_TIMEOUT)); // wait 10 seconds for the ledger to generate the blocks
+	await new Promise((r) => setTimeout(r, MAX_PROMISE_TIMEOUT - wDuration)); // wait for the ledger to generate the blocks
 
 	// 4. Check records
 	startDate = new Date().getTime();
-	// let prevDate = new Date(0);
 	nextStep = 0;
 	results = [];
+	const hashResponses: any[] = [];
 	for (i = 0; i < testParams.file_nb; i += 1) {
-		const res = checkHash(filesList[i].hash);
-		results.push(res);
+		results.push(checkHash(filesList[i].hash));
+		if (results.length === 500 || i === testParams.file_nb - 1) {
+			hashResponses.push(...(await Promise.all(results)));
+			await new Promise((r) => setTimeout(r, 3000));
+			results = [];
+		}
 		nextStep = displayProgress(i, testParams.file_nb, nextStep, "processing hashes...");
 	}
-	const cash = checkHashes(await Promise.all(results));
+	const cash = checkHashes(hashResponses);
 	if (cash && cash.length > 0) {
 		testResult = false;
 		testReport += cash;
@@ -201,4 +206,4 @@ async function phase1Scripts(deleteFiles) {
 	});
 }
 
-phase1Scripts(testParams.delete_files);
+void phase1Scripts(testParams.delete_files, testParams.write_files);

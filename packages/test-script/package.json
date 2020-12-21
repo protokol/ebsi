@@ -9,7 +9,7 @@
 		"build": "yarn clean && tsc",
 		"build:watch": "yarn build -w",
 		"clean": "rimraf .coverage dist tmp",
-		"run-script": "yarn node dist/index"
+		"run-script": "yarn build && yarn node dist/index"
 	},
 	"author": "",
 	"license": "EUPL-1.2",
