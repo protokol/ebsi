@@ -50,26 +50,6 @@ yarn install
 yarn build
 ```
 
-### Optional - Spin local testnet
-
-To run local database you need to install
-
--   Docker
--   Docker-Compose
-
-Go to the project's root (ebsi) and run docker command
-
-```sh
-cd docker/development/testnet
-docker-compose up postgres
-```
-
-Run local Ark node
-
-```sh
-yarn full:testnet
-```
-
 ### Move to the folder with test script
 
 ```sh
@@ -78,7 +58,7 @@ cd packages/test-script
 
 ### Setup .env file
 
-Setup .env file based on .example.env
+Setup .env file based on .example.env. Current example.env is already operational - just move it to .env.
 
 ### Configuration
 
@@ -124,13 +104,50 @@ To launch the scripts, run the below command in the terminal:
 yarn run-script
 ```
 
-## Licensing
+### Optional - Spin local testnet
 
-Copyright (c) 2020 European Commission  
-Licensed under the EUPL, Version 1.2 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
-You may not use this work except in compliance with the Licence.
-You may obtain a copy of the Licence at:
+To run local database you need to install
 
--   https://joinup.ec.europa.eu/page/eupl-text-11-12
+-   Docker
+-   Docker-Compose
 
-Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the Licence for the specific language governing permissions and limitations under the Licence.
+Go to the project's root (ebsi) and run docker command
+
+```sh
+cd docker/development/testnet
+docker-compose up postgres
+```
+
+Run local Ark node
+
+```sh
+yarn full:testnet
+```
+
+# Contact Us For Support And Custom Development
+
+info@protokol.com
+
+# License
+
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+This work is licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/), under the following terms:
+
+#### Attribution
+
+You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+
+#### NonCommercial
+
+You may not use the material for commercial purposes. For commercial purposes please reach out to info@protokol.com.
+
+#### ShareAlike
+
+If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+
+#### Legal code
+
+Read the rest of the obligatory [license legal code](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
+
+Copyright (c) Protokol.com 2020
