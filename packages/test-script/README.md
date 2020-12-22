@@ -17,7 +17,7 @@
 
 ## Getting started
 
-The testing script generates a bunch of random small files and sends their hash to the EBSI V1 Besu Ledger. Then it uses the EBSI V1 Timestamp API to retrieve timestamp of the transactions and checks hashes were inserted in order. Total and average timings are writting in 'testReport.txt' file.
+The testing script generates a bunch of random small files and sends their hash to the ARK Core Ledger. Then it uses the EBSI V1 Timestamp API to retrieve timestamp of the transactions and checks hashes were inserted in order. Total and average timings are writting in 'testReport.txt' file.
 
 ## Installation
 
