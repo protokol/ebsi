@@ -23,12 +23,6 @@ The testing script generates a bunch of random small files and sends their hash 
 
 ### Installing
 
-Move to the base directory (example: `ebsi-repo`)
-
-```sh
-cd ebsi-repo
-```
-
 Clone the repository and move to the root
 
 ```sh
