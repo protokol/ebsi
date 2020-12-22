@@ -7,16 +7,8 @@
 
 > Testing scripts for phase 1 of EBSI V2 Protocol Selection
 
-## Disclaimer - This is an experimental tool, for technical governance exploration and it is not part of EBSI releases.
+#### Disclaimer - This is an experimental tool, for technical governance exploration and it is not part of EBSI releases.
 
-## Table of Contents
-
-1. [Disclaimer](#Disclaimer)
-2. [Getting started](#Getting)
-3. [Installation](#Installation)
-4. [Usage](#Usage)
-5. [Run](#Run)
-6. [Licensing](#Licensing)
 
 ## Getting started
 
@@ -63,7 +55,16 @@ cd packages/test-script
 
 Setup .env file based on .example.env. Current example.env is already operational - just move it to .env.
 
-### Configuration
+
+## Run
+
+To launch the scripts, run the below command in the terminal:
+
+```sh
+yarn run-script
+```
+
+## Configuration
 
 Test parameters can be edited in config.js file:
 
@@ -90,24 +91,15 @@ The 'url' parameter is used to access the EBSI API.
 The scripts are run in the function 'phase1Scripts()' (of index.js). In order to adapt the script to another blockchain protocol, one will need to change:
 
 -   The base url in config.js
--   The login to EBSI ledger, done in 'besuLogin()' function.
--   The sending of the hash to the ledger, done in 'notarizeHash()', using Besu API
+-   The login to EBSI ledger, done in 'besuLogin()' function. //skipped
+-   The sending of the hash to the ledger, done in 'notarizeHash()', using ARK Core EBSI API Timestamp implementation
 
 The protocol should implement the Timestamp API. This API is called in the 'checkHash()' function.
 
 The script needs a '.env' file which includes a private key for EBSI login. The file is not part of the repository and so the script will not work out-of-the box. However an .env.example file is included to explain the expected format.
 
-N.b. With the EBSI V1 Besu ledger, the credential token generated in the 'besuLogin()' will last 15 minutes and no mechanism is implemented in the script to renew it, so the script will fail if file_nb parameter is too high (e.g. more than 1000 files).
 
-## Run
-
-To launch the scripts, run the below command in the terminal:
-
-```sh
-yarn run-script
-```
-
-### Optional - Spin local testnet
+## Optional - Spin local testnet
 
 To run local database you need to install
 
