@@ -25,8 +25,9 @@
 	"dependencies": {
 		"@arkecosystem/crypto": "^3.0.0-next",
 		"@protokol/notarization-crypto": "workspace:packages/notarization-crypto",
+		"axios": "^0.21.1",
+		"axios-retry": "^3.1.9",
 		"dotenv": "^8.2.0",
-		"ethers": "^5.0.17",
-		"supertest": "^6.0.0"
+		"ethers": "^5.0.17"
 	}
 }

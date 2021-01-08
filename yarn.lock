@@ -4066,6 +4066,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios-retry@npm:^3.1.9":
+  version: 3.1.9
+  resolution: "axios-retry@npm:3.1.9"
+  dependencies:
+    is-retry-allowed: ^1.1.0
+  checksum: 1e6a4df3089bd08377734e2dcb58a6895b272ca9facd6e8b2d0388c342b31d39a1ec4592abe171d9f596bbab374fbc4de6e845d4eb6d7440c874e97933f29888
+  languageName: node
+  linkType: hard
+
+"axios@npm:^0.21.1":
+  version: 0.21.1
+  resolution: "axios@npm:0.21.1"
+  dependencies:
+    follow-redirects: ^1.10.0
+  checksum: 864fb7b5d077d236737f10adca53bf451a93f35a15271f56fba8da07265a02d26b7d881b935a6697dc6adb0549ea3e56d2eecb403edaa3bb78f6479901c10f69
+  languageName: node
+  linkType: hard
+
 "babel-jest@npm:^26.6.3":
   version: 26.6.3
   resolution: "babel-jest@npm:26.6.3"
@@ -5031,7 +5049,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"combined-stream@npm:^1.0.6, combined-stream@npm:^1.0.8, combined-stream@npm:~1.0.6":
+"combined-stream@npm:^1.0.6, combined-stream@npm:~1.0.6":
   version: 1.0.8
   resolution: "combined-stream@npm:1.0.8"
   dependencies:
@@ -5073,7 +5091,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"component-emitter@npm:^1.2.1, component-emitter@npm:^1.3.0":
+"component-emitter@npm:^1.2.1":
   version: 1.3.0
   resolution: "component-emitter@npm:1.3.0"
   checksum: fc4edbf1014f0aed88dcec33ca02d2938734e428423f640d8a3f94975615b8e8c506c19e29b93949637c5a281353e75fa79e299e0d57732f42a9fe346cb2cad6
@@ -5131,13 +5149,6 @@ __metadata:
   dependencies:
     safe-buffer: ~5.1.1
   checksum: b10fbf041e3221c65e1ab67f05c8fcbad9c5fd078c62f4a6e05cb5fddc4b5a0e8a17c6a361c6a44f011b1a0c090b36aa88543be9dfa65da8c9e7f39c5de2d4df
-  languageName: node
-  linkType: hard
-
-"cookiejar@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "cookiejar@npm:2.1.2"
-  checksum: 4c733c15c190798bc1fb724f3044959cabc1565dee7dfc00f99219c7a4189b21cc243ccab52e0708994923f684189a4afa6b01b6b157f8c99273f1001602ac6f
   languageName: node
   linkType: hard
 
@@ -6747,6 +6758,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"follow-redirects@npm:^1.10.0":
+  version: 1.13.1
+  resolution: "follow-redirects@npm:1.13.1"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: c7c6c905876b939af04a1b27afa70e9c0ab5015d96f5ee49dd80db6952dc8c960b96a229647504468615d8a1a400da9bec9449e2aea9f9c6da6fdca0ba17d4c2
+  languageName: node
+  linkType: hard
+
 "for-in@npm:^1.0.2":
   version: 1.0.2
   resolution: "for-in@npm:1.0.2"
@@ -6772,17 +6793,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"form-data@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "form-data@npm:3.0.0"
-  dependencies:
-    asynckit: ^0.4.0
-    combined-stream: ^1.0.8
-    mime-types: ^2.1.12
-  checksum: 1af88217b449eda6566a0d95185f2baa403ed2a0e3b11547069f6062be66cbac7c8d7a25f0fc59560702e96526e659b5b9e5a8c6fefe00f06da44338191a9133
-  languageName: node
-  linkType: hard
-
 "form-data@npm:~2.3.2":
   version: 2.3.3
   resolution: "form-data@npm:2.3.3"
@@ -6791,13 +6801,6 @@ __metadata:
     combined-stream: ^1.0.6
     mime-types: ^2.1.12
   checksum: 862e686b105634222db77138d5f5ae08ba85f88c04925de5be86b2b9d03cf671d86566ad10f1dd5217634c0f1634069dfc1a663a1cc13e8fbac0ce8f670ad070
-  languageName: node
-  linkType: hard
-
-"formidable@npm:^1.2.2":
-  version: 1.2.2
-  resolution: "formidable@npm:1.2.2"
-  checksum: 9fe5ef38d5881ac16cc8ca78bd3229fbf32b10e0fd3b718ec20f86ea1de7302aa0ffcfa9a9163cec02fc3f825faf9d0533f24539bb20ae6d73b580b526c25edb
   languageName: node
   linkType: hard
 
@@ -7987,6 +7990,13 @@ fsevents@~2.1.2:
   dependencies:
     has-symbols: ^1.0.1
   checksum: 0c5b9d335c125cc59a83b9446b172d419303034f3cb570e95bfb7b45fc1dfb8bedd7ecf5e8139a99b8fed66894ee516fd7ce376feb109504f64c53092c7f07ee
+  languageName: node
+  linkType: hard
+
+"is-retry-allowed@npm:^1.1.0":
+  version: 1.2.0
+  resolution: "is-retry-allowed@npm:1.2.0"
+  checksum: 739384d2662f38fe0edd1bcdf7f88551c6f1b1fdc7fde3ba86442cd675d337f14100d6479bcbb4635f7e38d11e1a2c2e173a52ba39547631960641d9fbe65531
   languageName: node
   linkType: hard
 
@@ -9489,13 +9499,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"methods@npm:1.1.2, methods@npm:^1.1.2":
-  version: 1.1.2
-  resolution: "methods@npm:1.1.2"
-  checksum: 450e4ea0fd4a0f3de8c0593d753c7d6c8f2ee49766f5ef35c68cc2ac41699d5e295b7d6330fc2b7271b8569a07857e3eb0b5df0599a353c5808265b4b5066168
-  languageName: node
-  linkType: hard
-
 "micro-memoize@npm:^2.1.1":
   version: 2.1.2
   resolution: "micro-memoize@npm:2.1.2"
@@ -9554,15 +9557,6 @@ fsevents@~2.1.2:
   dependencies:
     mime-db: 1.44.0
   checksum: 51fe2f2c08c10ac7a2f67e2ce5de30f6500faa88d095418a1ab6e90e30960db7c682a8ecce60d3d4e293ac52c4700ca99399833db998ea9ec83d6f0503b70a94
-  languageName: node
-  linkType: hard
-
-"mime@npm:^2.4.6":
-  version: 2.4.6
-  resolution: "mime@npm:2.4.6"
-  bin:
-    mime: cli.js
-  checksum: 319ec3858894aa9befa9da90e33c4422506689f1e3e7c939095df68abe848050a51070c78a31061769d9192051a8c9f33d14d6771dc0f2ff309fe846898e0807
   languageName: node
   linkType: hard
 
@@ -11443,6 +11437,8 @@ fsevents@~2.1.2:
   dependencies:
     "@arkecosystem/crypto": ^3.0.0-next
     "@protokol/notarization-crypto": "workspace:packages/notarization-crypto"
+    axios: ^0.21.1
+    axios-retry: ^3.1.9
     dotenv: ^8.2.0
     eslint: ^7.10.0
     eslint-config-prettier: ^7.0.0
@@ -11451,7 +11447,6 @@ fsevents@~2.1.2:
     ethers: ^5.0.17
     prettier: ^2.1.2
     rimraf: ^3.0.2
-    supertest: ^6.0.0
     typescript: ~4.1.0
   languageName: unknown
   linkType: soft
@@ -11500,13 +11495,6 @@ fsevents@~2.1.2:
   version: 1.5.1
   resolution: "q@npm:1.5.1"
   checksum: f610c1295a4f1b334affbe5333bc8c6160b907d011a62f1c6d05d4ca985535ea271fd8684e1e655b4659cc5b71f5be9ac4ccc84482d869b5a0576955598a7dca
-  languageName: node
-  linkType: hard
-
-"qs@npm:^6.9.4":
-  version: 6.9.4
-  resolution: "qs@npm:6.9.4"
-  checksum: beba62d1e1c66e9888cc08a488eb95771c252a92289a96bff4b767a49e4e7afe9487d7ee3269b856292d8281b855ac5eac927c2e77f845e407ee4fe54743fea7
   languageName: node
   linkType: hard
 
@@ -12910,35 +12898,6 @@ fsevents@~2.1.2:
   version: 3.0.0
   resolution: "stubs@npm:3.0.0"
   checksum: 5d58c7b76aa6ac62149166ae43a1fc257cc093fffc2b584cbc09a49c5feb951f4ba05c6832453fad392a3c7665bbe62167c116a17edc8520637d0d65706bef0d
-  languageName: node
-  linkType: hard
-
-"superagent@npm:6.1.0":
-  version: 6.1.0
-  resolution: "superagent@npm:6.1.0"
-  dependencies:
-    component-emitter: ^1.3.0
-    cookiejar: ^2.1.2
-    debug: ^4.1.1
-    fast-safe-stringify: ^2.0.7
-    form-data: ^3.0.0
-    formidable: ^1.2.2
-    methods: ^1.1.2
-    mime: ^2.4.6
-    qs: ^6.9.4
-    readable-stream: ^3.6.0
-    semver: ^7.3.2
-  checksum: bc21d32d9dd1dd0e33df5f5e112e6796b010ae08d4402d61cc232de6204c8fb5aaa04ed717873c217e033fc80e7c2578aa4f1b607feec54627a5f724805c1e5b
-  languageName: node
-  linkType: hard
-
-"supertest@npm:^6.0.0":
-  version: 6.0.1
-  resolution: "supertest@npm:6.0.1"
-  dependencies:
-    methods: 1.1.2
-    superagent: 6.1.0
-  checksum: 6083017645fe078eb81ec5c99d72dfcc53e9d73815514e47c7b3a5feb6a7d46b1cae781293c816d68cf181a7f3e842b06de796f3da79cfe76ce9160891618d7b
   languageName: node
   linkType: hard
 

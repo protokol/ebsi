@@ -1,14 +1,16 @@
 import { Identities, Managers, Transactions } from "@arkecosystem/crypto";
 import { Builders, Transactions as EbsiTransactions } from "@protokol/notarization-crypto";
+import axios from "axios";
+import axiosRetry from "axios-retry";
 import { randomBytes } from "crypto";
 import { utils } from "ethers";
 import { unlinkSync, writeFile as _writeFile, writeFileSync } from "fs";
-import supertest from "supertest";
 
 /* eslint no-console: ["error", { allow: ["warn", "error"] }] */
 import { finalConfig, privKey, testParams } from "./config";
 
-const request = supertest(finalConfig.url);
+const request = axios.create({ baseURL: finalConfig.url });
+axiosRetry(request, { retries: 3 });
 
 function createRandomFile(name, size = 1024, writeFile = true) {
 	const data = randomBytes(size);
@@ -26,7 +28,7 @@ async function checkHash(h) {
 	const getData = async (uri) => {
 		try {
 			const response = await request.get(uri);
-			return response.body;
+			return response.data;
 		} catch (error) {
 			console.error(error);
 			return null;
@@ -46,8 +48,8 @@ function constructNotarizeHashTx(hsh, nonce, wif) {
 
 async function notarizeHashes(transactions) {
 	try {
-		const response = await request.post("transactions").send({ transactions });
-		if (response.status === 200 && response.body.data.accept.length) {
+		const response = await request.post("transactions", { transactions });
+		if (response.status === 200 && response.data.data.accept.length) {
 			return true;
 		}
 		console.error(`error sending hash:${response.status}`);
@@ -114,9 +116,9 @@ function checkHashes(ans) {
 
 async function phase1Scripts(deleteFiles, writeFiles) {
 	console.warn("running test scripts for protocol testing phase 1...");
-	const height = (await request.get("blockchain")).body.data.block.height;
-	const config = (await request.get("node/configuration/crypto")).body.data;
-	const txPerBlock = (await request.get("node/configuration")).body.data.constants.block.maxTransactions;
+	const height = (await request.get("blockchain")).data.data.block.height;
+	const config = (await request.get("node/configuration/crypto")).data.data;
+	const txPerBlock = (await request.get("node/configuration")).data.data.constants.block.maxTransactions;
 	const MAX_TX_PER_REQUEST = 40;
 	const MAX_PROMISE_TIMEOUT = 9000 * Math.ceil(testParams.file_nb / txPerBlock); // there are "txPerBlock" transactions per block, wait for all of them to be confirmed
 
@@ -140,7 +142,7 @@ async function phase1Scripts(deleteFiles, writeFiles) {
 		fileNames.push(fname);
 	}
 	// 3. Notarize hashes
-	const nonce = Number((await request.get(`wallets/${address}`)).body.data.nonce) + 1;
+	const nonce = Number((await request.get(`wallets/${address}`)).data.data.nonce) + 1;
 	let startDate = new Date().getTime();
 	let nextStep = 0;
 	let results: any = [];
