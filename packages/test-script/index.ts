@@ -117,12 +117,15 @@ function checkHashes(ans) {
 async function phase1Scripts(deleteFiles, writeFiles) {
 	console.warn("running test scripts for protocol testing phase 1...");
 	const height = (await request.get("blockchain")).data.data.block.height;
-	const config = (await request.get("node/configuration/crypto")).data.data;
-	const txPerBlock = (await request.get("node/configuration")).data.data.constants.block.maxTransactions;
-	const MAX_TX_PER_REQUEST = 40;
+	const cryptoConfig = (await request.get("node/configuration/crypto")).data.data;
+	const {
+		data: { data: nodeConfig },
+	} = await request.get("node/configuration");
+	const txPerBlock = nodeConfig.constants.block.maxTransactions;
+	const txPerRequest = nodeConfig.transactionPool.maxTransactionsPerRequest;
 	const MAX_PROMISE_TIMEOUT = 9000 * Math.ceil(testParams.file_nb / txPerBlock); // there are "txPerBlock" transactions per block, wait for all of them to be confirmed
 
-	Managers.configManager.setConfig(config);
+	Managers.configManager.setConfig(cryptoConfig);
 	Managers.configManager.setHeight(Number(height));
 	Transactions.TransactionRegistry.registerTransactionType(EbsiTransactions.NotarizationTransaction);
 
@@ -148,7 +151,7 @@ async function phase1Scripts(deleteFiles, writeFiles) {
 	let results: any = [];
 	for (i = 0; i < testParams.file_nb; i += 1) {
 		results.push(constructNotarizeHashTx(filesList[i].hash, nonce + i, wif));
-		if (results.length === MAX_TX_PER_REQUEST || i === testParams.file_nb - 1) {
+		if (results.length === txPerRequest || i === testParams.file_nb - 1) {
 			await notarizeHashes(results);
 			await new Promise((r) => setTimeout(r, 800));
 			results = [];
