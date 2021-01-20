@@ -20,7 +20,10 @@
 				"package": "@arkecosystem/core-magistrate-transactions"
 			},
 			{
-				"package": "@arkecosystem/core-transaction-pool"
+				"package": "@arkecosystem/core-transaction-pool",
+				"options": {
+					"maxTransactionsPerRequest": 1500
+				}
 			},
 			{
 				"package": "@protokol/notarization-transactions"
