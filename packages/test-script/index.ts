@@ -121,9 +121,7 @@ async function phase1Scripts(deleteFiles, writeFiles) {
 	const {
 		data: { data: nodeConfig },
 	} = await request.get("node/configuration");
-	const txPerBlock = nodeConfig.constants.block.maxTransactions;
 	const txPerRequest = nodeConfig.transactionPool.maxTransactionsPerRequest;
-	const MAX_PROMISE_TIMEOUT = 9000 * Math.ceil(testParams.file_nb / txPerBlock); // there are "txPerBlock" transactions per block, wait for all of them to be confirmed
 
 	Managers.configManager.setConfig(cryptoConfig);
 	Managers.configManager.setHeight(Number(height));
@@ -172,7 +170,10 @@ async function phase1Scripts(deleteFiles, writeFiles) {
 		}
 	}
 
-	await new Promise((r) => setTimeout(r, MAX_PROMISE_TIMEOUT - wDuration)); // wait for the ledger to generate the blocks
+	// wait for the ledger to generate the blocks
+	while (!(await checkHash(filesList[filesList.length - 1].hash))?.timestamp) {
+		await new Promise((r) => setTimeout(r, 500));
+	}
 
 	// 4. Check records
 	startDate = new Date().getTime();
