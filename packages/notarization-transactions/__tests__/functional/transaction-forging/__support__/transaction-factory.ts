@@ -11,6 +11,12 @@ export class NotarizationTransactionFactory extends TransactionFactory {
         return new NotarizationTransactionFactory(app);
     }
 
+    public withVendorField(vendorField: string): NotarizationTransactionFactory {
+        this.builder.vendorField(vendorField);
+
+        return this;
+    }
+
     public Notarization(notarization: Interfaces.INotarizationAsset): NotarizationTransactionFactory {
         this.builder = new Builders.NotarizationBuilder().Notarization(notarization);
 
