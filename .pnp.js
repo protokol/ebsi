@@ -72,7 +72,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["codecov", "npm:3.8.1"],
             ["cross-env", "npm:7.0.3"],
             ["eslint", "npm:7.18.0"],
-            ["eslint-config-prettier", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:7.2.0"],
+            ["eslint-config-prettier", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:8.0.0"],
             ["eslint-plugin-jest", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:24.1.3"],
             ["eslint-plugin-prettier", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:3.3.1"],
             ["eslint-plugin-simple-import-sort", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:7.0.0"],
@@ -3068,7 +3068,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["codecov", "npm:3.8.1"],
             ["cross-env", "npm:7.0.3"],
             ["eslint", "npm:7.18.0"],
-            ["eslint-config-prettier", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:7.2.0"],
+            ["eslint-config-prettier", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:8.0.0"],
             ["eslint-plugin-jest", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:24.1.3"],
             ["eslint-plugin-prettier", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:3.3.1"],
             ["eslint-plugin-simple-import-sort", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:7.0.0"],
@@ -3119,7 +3119,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["codecov", "npm:3.8.1"],
             ["cross-env", "npm:7.0.3"],
             ["eslint", "npm:7.18.0"],
-            ["eslint-config-prettier", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:7.2.0"],
+            ["eslint-config-prettier", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:8.0.0"],
             ["eslint-plugin-jest", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:24.1.3"],
             ["eslint-plugin-prettier", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:3.3.1"],
             ["eslint-plugin-simple-import-sort", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:7.0.0"],
@@ -7027,17 +7027,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["eslint-config-prettier", [
-        ["npm:7.2.0", {
-          "packageLocation": "./.yarn/cache/eslint-config-prettier-npm-7.2.0-94db6614b2-6812150ea4.zip/node_modules/eslint-config-prettier/",
+        ["npm:8.0.0", {
+          "packageLocation": "./.yarn/cache/eslint-config-prettier-npm-8.0.0-d8e087975e-4f7eb2885a.zip/node_modules/eslint-config-prettier/",
           "packageDependencies": [
-            ["eslint-config-prettier", "npm:7.2.0"]
+            ["eslint-config-prettier", "npm:8.0.0"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:7.2.0", {
-          "packageLocation": "./.yarn/$$virtual/eslint-config-prettier-virtual-18733ce4ed/0/cache/eslint-config-prettier-npm-7.2.0-94db6614b2-6812150ea4.zip/node_modules/eslint-config-prettier/",
+        ["virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:8.0.0", {
+          "packageLocation": "./.yarn/$$virtual/eslint-config-prettier-virtual-7047e4fa8f/0/cache/eslint-config-prettier-npm-8.0.0-d8e087975e-4f7eb2885a.zip/node_modules/eslint-config-prettier/",
           "packageDependencies": [
-            ["eslint-config-prettier", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:7.2.0"],
+            ["eslint-config-prettier", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:8.0.0"],
             ["@types/eslint", "npm:7.2.6"],
             ["eslint", "npm:7.18.0"]
           ],
@@ -7047,10 +7047,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["virtual:90a2739371be8d41c072a446999e711d315c60a57dbe1e10ebe8ca35ca7a69cab6b7d9b8e5dc65cafd3ddcb9dde91686ab20b447af88002a58f9ec872ec63b0d#npm:7.2.0", {
-          "packageLocation": "./.yarn/$$virtual/eslint-config-prettier-virtual-690bd8dfc9/0/cache/eslint-config-prettier-npm-7.2.0-94db6614b2-6812150ea4.zip/node_modules/eslint-config-prettier/",
+        ["virtual:90a2739371be8d41c072a446999e711d315c60a57dbe1e10ebe8ca35ca7a69cab6b7d9b8e5dc65cafd3ddcb9dde91686ab20b447af88002a58f9ec872ec63b0d#npm:8.0.0", {
+          "packageLocation": "./.yarn/$$virtual/eslint-config-prettier-virtual-a7d841db8f/0/cache/eslint-config-prettier-npm-8.0.0-d8e087975e-4f7eb2885a.zip/node_modules/eslint-config-prettier/",
           "packageDependencies": [
-            ["eslint-config-prettier", "virtual:90a2739371be8d41c072a446999e711d315c60a57dbe1e10ebe8ca35ca7a69cab6b7d9b8e5dc65cafd3ddcb9dde91686ab20b447af88002a58f9ec872ec63b0d#npm:7.2.0"],
+            ["eslint-config-prettier", "virtual:90a2739371be8d41c072a446999e711d315c60a57dbe1e10ebe8ca35ca7a69cab6b7d9b8e5dc65cafd3ddcb9dde91686ab20b447af88002a58f9ec872ec63b0d#npm:8.0.0"],
             ["@types/eslint", null],
             ["eslint", "npm:7.18.0"]
           ],
@@ -7176,7 +7176,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/eslint", "npm:7.2.6"],
             ["@types/prettier", "npm:2.1.6"],
             ["eslint", "npm:7.18.0"],
-            ["eslint-config-prettier", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:7.2.0"],
+            ["eslint-config-prettier", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:8.0.0"],
             ["prettier", "npm:2.2.1"],
             ["prettier-linter-helpers", "npm:1.0.0"]
           ],
@@ -7196,7 +7196,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/eslint", null],
             ["@types/prettier", null],
             ["eslint", "npm:7.18.0"],
-            ["eslint-config-prettier", "virtual:90a2739371be8d41c072a446999e711d315c60a57dbe1e10ebe8ca35ca7a69cab6b7d9b8e5dc65cafd3ddcb9dde91686ab20b447af88002a58f9ec872ec63b0d#npm:7.2.0"],
+            ["eslint-config-prettier", "virtual:90a2739371be8d41c072a446999e711d315c60a57dbe1e10ebe8ca35ca7a69cab6b7d9b8e5dc65cafd3ddcb9dde91686ab20b447af88002a58f9ec872ec63b0d#npm:8.0.0"],
             ["prettier", "npm:2.2.1"],
             ["prettier-linter-helpers", "npm:1.0.0"]
           ],
@@ -13149,7 +13149,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["axios-retry", "npm:3.1.9"],
             ["dotenv", "npm:8.2.0"],
             ["eslint", "npm:7.18.0"],
-            ["eslint-config-prettier", "virtual:90a2739371be8d41c072a446999e711d315c60a57dbe1e10ebe8ca35ca7a69cab6b7d9b8e5dc65cafd3ddcb9dde91686ab20b447af88002a58f9ec872ec63b0d#npm:7.2.0"],
+            ["eslint-config-prettier", "virtual:90a2739371be8d41c072a446999e711d315c60a57dbe1e10ebe8ca35ca7a69cab6b7d9b8e5dc65cafd3ddcb9dde91686ab20b447af88002a58f9ec872ec63b0d#npm:8.0.0"],
             ["eslint-plugin-import", "virtual:90a2739371be8d41c072a446999e711d315c60a57dbe1e10ebe8ca35ca7a69cab6b7d9b8e5dc65cafd3ddcb9dde91686ab20b447af88002a58f9ec872ec63b0d#npm:2.22.1"],
             ["eslint-plugin-prettier", "virtual:90a2739371be8d41c072a446999e711d315c60a57dbe1e10ebe8ca35ca7a69cab6b7d9b8e5dc65cafd3ddcb9dde91686ab20b447af88002a58f9ec872ec63b0d#npm:3.3.1"],
             ["ethers", "npm:5.0.26"],
