@@ -3179,7 +3179,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-simple-import-sort", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:7.0.0"],
             ["jest", "npm:26.6.3"],
             ["jest-extended", "npm:0.11.5"],
-            ["npm-check-updates", "npm:11.4.0"],
+            ["npm-check-updates", "npm:11.5.0"],
             ["prettier", "npm:2.2.1"],
             ["rimraf", "npm:3.0.2"],
             ["ts-jest", "virtual:309680297aa012252b83b4a87f5fe8c709b81918c90c361c90c39f6bb345b997f844dde35b75f2d253b2ee75532370d6a3035f414215bd34dd982a374bbc952f#npm:26.5.4"],
@@ -12120,10 +12120,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:11.4.0", {
-          "packageLocation": "./.yarn/cache/npm-check-updates-npm-11.4.0-fa2b8ea83a-c858445be8.zip/node_modules/npm-check-updates/",
+        ["npm:11.5.0", {
+          "packageLocation": "./.yarn/cache/npm-check-updates-npm-11.5.0-419cc5ca6c-6db7f8d0c6.zip/node_modules/npm-check-updates/",
           "packageDependencies": [
-            ["npm-check-updates", "npm:11.4.0"],
+            ["npm-check-updates", "npm:11.5.0"],
             ["chalk", "npm:4.1.0"],
             ["cint", "npm:8.2.1"],
             ["cli-table", "npm:0.3.6"],
