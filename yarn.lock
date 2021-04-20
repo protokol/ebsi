@@ -2775,7 +2775,7 @@ __metadata:
     eslint-plugin-simple-import-sort: ^7.0.0
     jest: ^26.6.3
     jest-extended: ^0.11.5
-    npm-check-updates: ~11.4.0
+    npm-check-updates: ~11.5.0
     prettier: ^2.1.2
     rimraf: ^3.0.2
     ts-jest: ~26.5.0
@@ -10608,9 +10608,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"npm-check-updates@npm:~11.4.0":
-  version: 11.4.0
-  resolution: "npm-check-updates@npm:11.4.0"
+"npm-check-updates@npm:~11.5.0":
+  version: 11.5.0
+  resolution: "npm-check-updates@npm:11.5.0"
   dependencies:
     chalk: ^4.1.0
     cint: ^8.2.1
@@ -10642,7 +10642,7 @@ fsevents@~2.1.2:
   bin:
     ncu: bin/cli.js
     npm-check-updates: bin/cli.js
-  checksum: c858445be82abf01a162b9645bbf855157475544e7a28a4d7a2808a07886975ef7400c2c363a95501a7bb2bfb5840f780d2b8c5f54ff25090e016d0ca434168b
+  checksum: 6db7f8d0c69bc818baff99cfc06fd55404eedf6cb579761620e57c2d8b60ae9b5b8dabd79c4239f38dbdce25f129331c413c3e111ce3a0dbb557f150a16cbe09
   languageName: node
   linkType: hard
 
