@@ -3235,7 +3235,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.14.41"],
             ["@types/prettier", "npm:2.2.3"],
             ["@types/rimraf", "npm:3.0.0"],
-            ["@types/semver", "npm:7.3.4"],
+            ["@types/semver", "npm:7.3.5"],
             ["bip39", "npm:3.0.3"],
             ["codecov", "npm:3.8.1"],
             ["eslint", "npm:7.25.0"],
@@ -3789,6 +3789,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-semver-npm-7.3.4-96fde085ea-7e8588aa55.zip/node_modules/@types/semver/",
           "packageDependencies": [
             ["@types/semver", "npm:7.3.4"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:7.3.5", {
+          "packageLocation": "./.yarn/cache/@types-semver-npm-7.3.5-16e9539e10-fcb9faf9ac.zip/node_modules/@types/semver/",
+          "packageDependencies": [
+            ["@types/semver", "npm:7.3.5"]
           ],
           "linkType": "HARD",
         }]
