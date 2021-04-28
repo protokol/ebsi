@@ -3236,7 +3236,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/prettier", "npm:2.2.3"],
             ["@types/rimraf", "npm:3.0.0"],
             ["@types/semver", "npm:7.3.5"],
-            ["bip39", "npm:3.0.3"],
+            ["bip39", "npm:3.0.4"],
             ["codecov", "npm:3.8.1"],
             ["eslint", "npm:7.25.0"],
             ["eslint-plugin-prettier", "virtual:51bc4856705b6c1d381b3aaf38af155aaa9a1d34b9f214d3ef7d495129c67d4fb61ed614e594b9c015c961de7a18469030afe387a0bc8eeb46be17d5d7b4f799#npm:3.3.1"],
@@ -5139,6 +5139,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/bip39-npm-3.0.3-75d672a562-948443cd37.zip/node_modules/bip39/",
           "packageDependencies": [
             ["bip39", "npm:3.0.3"],
+            ["@types/node", "npm:11.11.6"],
+            ["create-hash", "npm:1.2.0"],
+            ["pbkdf2", "npm:3.1.1"],
+            ["randombytes", "npm:2.1.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:3.0.4", {
+          "packageLocation": "./.yarn/cache/bip39-npm-3.0.4-7c69c9182f-24359ef61f.zip/node_modules/bip39/",
+          "packageDependencies": [
+            ["bip39", "npm:3.0.4"],
             ["@types/node", "npm:11.11.6"],
             ["create-hash", "npm:1.2.0"],
             ["pbkdf2", "npm:3.1.1"],
