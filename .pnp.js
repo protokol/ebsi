@@ -6824,10 +6824,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:8.2.0", {
-          "packageLocation": "./.yarn/cache/dotenv-npm-8.2.0-6b21df4d37-16cb89cbd7.zip/node_modules/dotenv/",
+        ["npm:9.0.0", {
+          "packageLocation": "./.yarn/cache/dotenv-npm-9.0.0-94b3d52fa9-8111fb99a1.zip/node_modules/dotenv/",
           "packageDependencies": [
-            ["dotenv", "npm:8.2.0"]
+            ["dotenv", "npm:9.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -13586,7 +13586,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@protokol/notarization-crypto", "workspace:packages/notarization-crypto"],
             ["axios", "npm:0.21.1"],
             ["axios-retry", "npm:3.1.9"],
-            ["dotenv", "npm:8.2.0"],
+            ["dotenv", "npm:9.0.0"],
             ["eslint", "npm:7.24.0"],
             ["eslint-config-prettier", "virtual:90a2739371be8d41c072a446999e711d315c60a57dbe1e10ebe8ca35ca7a69cab6b7d9b8e5dc65cafd3ddcb9dde91686ab20b447af88002a58f9ec872ec63b0d#npm:8.2.0"],
             ["eslint-plugin-import", "virtual:90a2739371be8d41c072a446999e711d315c60a57dbe1e10ebe8ca35ca7a69cab6b7d9b8e5dc65cafd3ddcb9dde91686ab20b447af88002a58f9ec872ec63b0d#npm:2.22.1"],
