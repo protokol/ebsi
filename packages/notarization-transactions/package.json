@@ -60,7 +60,6 @@
         "@types/node": "^14.14.37",
         "@types/prettier": "^2.1.5",
         "@types/rimraf": "^3.0.0",
-        "@types/semver": "7.3.5",
         "bip39": "3.0.4",
         "codecov": "^3.8.1",
         "eslint": "7.25.0",
