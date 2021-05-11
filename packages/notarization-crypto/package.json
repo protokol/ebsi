@@ -1,6 +1,6 @@
 {
     "name": "@protokol/notarization-crypto",
-    "version": "1.0.0-beta.2",
+    "version": "1.0.0-beta.3",
     "description": "Transaction Builders For Notarization Transaction Types",
     "license": "CC-BY-NC-SA-4.0",
     "homepage": "https://protokol.com",
