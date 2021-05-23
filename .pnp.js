@@ -6764,17 +6764,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["dotenv", [
+        ["npm:10.0.0", {
+          "packageLocation": "./.yarn/cache/dotenv-npm-10.0.0-36b272df25-9c45712e21.zip/node_modules/dotenv/",
+          "packageDependencies": [
+            ["dotenv", "npm:10.0.0"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:6.2.0", {
           "packageLocation": "./.yarn/cache/dotenv-npm-6.2.0-72b7dafc27-2589b4c8e3.zip/node_modules/dotenv/",
           "packageDependencies": [
             ["dotenv", "npm:6.2.0"]
-          ],
-          "linkType": "HARD",
-        }],
-        ["npm:9.0.0", {
-          "packageLocation": "./.yarn/cache/dotenv-npm-9.0.0-94b3d52fa9-8111fb99a1.zip/node_modules/dotenv/",
-          "packageDependencies": [
-            ["dotenv", "npm:9.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -13458,7 +13458,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@protokol/notarization-crypto", "workspace:packages/notarization-crypto"],
             ["axios", "npm:0.21.1"],
             ["axios-retry", "npm:3.1.9"],
-            ["dotenv", "npm:9.0.0"],
+            ["dotenv", "npm:10.0.0"],
             ["eslint", "npm:7.25.0"],
             ["eslint-config-prettier", "virtual:90a2739371be8d41c072a446999e711d315c60a57dbe1e10ebe8ca35ca7a69cab6b7d9b8e5dc65cafd3ddcb9dde91686ab20b447af88002a58f9ec872ec63b0d#npm:8.3.0"],
             ["eslint-plugin-import", "virtual:90a2739371be8d41c072a446999e711d315c60a57dbe1e10ebe8ca35ca7a69cab6b7d9b8e5dc65cafd3ddcb9dde91686ab20b447af88002a58f9ec872ec63b0d#npm:2.22.1"],

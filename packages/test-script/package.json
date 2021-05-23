@@ -27,7 +27,7 @@
 		"@protokol/notarization-crypto": "workspace:packages/notarization-crypto",
 		"axios": "^0.21.1",
 		"axios-retry": "^3.1.9",
-		"dotenv": "^9.0.0",
+		"dotenv": "^10.0.0",
 		"ethers": "^5.0.17"
 	}
 }
