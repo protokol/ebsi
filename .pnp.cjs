@@ -57,7 +57,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@arkecosystem/core", "virtual:3588c977708c640c978cd32119cdd6c5ba92d6d4b0d071aa7fd7252238c9adf05ae49a149b5493e6db91c5b221cb82bebc39a39d5ca16f3e3d58cf6dee5d87bc#npm:3.0.0-next.31"],
             ["@arkecosystem/core-cli", "npm:3.0.0-next.31"],
-            ["@sindresorhus/tsconfig", "npm:1.0.2"],
+            ["@sindresorhus/tsconfig", "npm:2.0.0"],
             ["@types/eslint", "npm:7.28.0"],
             ["@types/eslint-plugin-prettier", "npm:3.1.0"],
             ["@types/jest", "npm:27.0.0"],
@@ -3240,7 +3240,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@protokol/ebsi", "workspace:."],
             ["@arkecosystem/core", "virtual:3588c977708c640c978cd32119cdd6c5ba92d6d4b0d071aa7fd7252238c9adf05ae49a149b5493e6db91c5b221cb82bebc39a39d5ca16f3e3d58cf6dee5d87bc#npm:3.0.0-next.31"],
             ["@arkecosystem/core-cli", "npm:3.0.0-next.31"],
-            ["@sindresorhus/tsconfig", "npm:1.0.2"],
+            ["@sindresorhus/tsconfig", "npm:2.0.0"],
             ["@types/eslint", "npm:7.28.0"],
             ["@types/eslint-plugin-prettier", "npm:3.1.0"],
             ["@types/jest", "npm:27.0.0"],
@@ -3286,7 +3286,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@hapi/joi", "npm:17.1.1"],
             ["@protokol/notarization-crypto", "workspace:packages/notarization-crypto"],
             ["@protokol/notarization-transactions", "workspace:packages/notarization-transactions"],
-            ["@sindresorhus/tsconfig", "npm:1.0.2"],
+            ["@sindresorhus/tsconfig", "npm:2.0.0"],
             ["@types/eslint", "npm:7.28.0"],
             ["@types/eslint-plugin-prettier", "npm:3.1.0"],
             ["@types/hapi__boom", "npm:7.4.1"],
@@ -3324,7 +3324,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@arkecosystem/core-test-framework", "npm:3.0.0-next.31"],
             ["@arkecosystem/crypto", "npm:3.0.0-next.31"],
             ["@protokol/utils", "npm:1.0.0-beta.38"],
-            ["@sindresorhus/tsconfig", "npm:1.0.2"],
+            ["@sindresorhus/tsconfig", "npm:2.0.0"],
             ["@types/jest", "npm:27.0.0"],
             ["@types/node", "npm:14.17.6"],
             ["@types/rimraf", "npm:3.0.1"],
@@ -3354,7 +3354,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@arkecosystem/core-transactions", "npm:3.0.0-next.31"],
             ["@arkecosystem/crypto", "npm:3.0.0-next.31"],
             ["@protokol/notarization-crypto", "workspace:packages/notarization-crypto"],
-            ["@sindresorhus/tsconfig", "npm:1.0.2"],
+            ["@sindresorhus/tsconfig", "npm:2.0.0"],
             ["@types/eslint", "npm:7.28.0"],
             ["@types/eslint-plugin-prettier", "npm:3.1.0"],
             ["@types/jest", "npm:27.0.0"],
@@ -3463,10 +3463,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@sindresorhus/tsconfig", [
-        ["npm:1.0.2", {
-          "packageLocation": "./.yarn/cache/@sindresorhus-tsconfig-npm-1.0.2-a4962efd1e-7091862d88.zip/node_modules/@sindresorhus/tsconfig/",
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/@sindresorhus-tsconfig-npm-2.0.0-61b5b9d584-fea48f9b1e.zip/node_modules/@sindresorhus/tsconfig/",
           "packageDependencies": [
-            ["@sindresorhus/tsconfig", "npm:1.0.2"]
+            ["@sindresorhus/tsconfig", "npm:2.0.0"]
           ],
           "linkType": "HARD",
         }]
