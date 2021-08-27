@@ -7,7 +7,7 @@ export class NotarizationTransactionFactory extends TransactionFactory {
         super(app);
     }
 
-    public static initialize(app?: Contracts.Kernel.Application): NotarizationTransactionFactory {
+    public static override initialize(app?: Contracts.Kernel.Application): NotarizationTransactionFactory {
         return new NotarizationTransactionFactory(app);
     }
 

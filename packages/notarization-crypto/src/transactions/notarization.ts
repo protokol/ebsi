@@ -10,14 +10,14 @@ import { amountSchema, notarizationSchema, vendorFieldSchema } from "./utils/not
 const { schemas } = Transactions;
 
 export class NotarizationTransaction extends Transactions.Transaction {
-    public static typeGroup: number = NotarizationTransactionGroup;
-    public static type = NotarizationTransactionTypes.Notarization;
-    public static key = "Notarization";
-    public static version: number = defaults.version;
+    public static override typeGroup: number = NotarizationTransactionGroup;
+    public static override type = NotarizationTransactionTypes.Notarization;
+    public static override key = "Notarization";
+    public static override version: number = defaults.version;
 
-    protected static defaultStaticFee = Utils.BigNumber.make(NotarizationStaticFees.Notarization);
+    protected static override defaultStaticFee = Utils.BigNumber.make(NotarizationStaticFees.Notarization);
 
-    public static getSchema(): Transactions.schemas.TransactionSchema {
+    public static override getSchema(): Transactions.schemas.TransactionSchema {
         return schemas.extend(schemas.transactionBaseSchema, {
             $id: this.key,
             required: ["asset", "typeGroup"],
@@ -67,7 +67,7 @@ export class NotarizationTransaction extends Transactions.Transaction {
         };
     }
 
-    public hasVendorField(): boolean {
+    public override hasVendorField(): boolean {
         return true;
     }
 }
