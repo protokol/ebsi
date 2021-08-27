@@ -47,7 +47,7 @@ export class NotarizationTransactionHandler extends Handlers.TransactionHandler 
         return [];
     }
 
-    public dynamicFee({
+    public override dynamicFee({
         addonBytes,
         satoshiPerByte,
         transaction,
@@ -81,11 +81,11 @@ export class NotarizationTransactionHandler extends Handlers.TransactionHandler 
         }
     }
 
-    public emitEvents(transaction: Interfaces.ITransaction, emitter: Contracts.Kernel.EventDispatcher): void {
-        emitter.dispatch(NotarizationApplicationEvents.Notarization, transaction.data);
+    public override emitEvents(transaction: Interfaces.ITransaction, emitter: Contracts.Kernel.EventDispatcher): void {
+        void emitter.dispatch(NotarizationApplicationEvents.Notarization, transaction.data);
     }
 
-    public async throwIfCannotBeApplied(
+    public override async throwIfCannotBeApplied(
         transaction: Interfaces.ITransaction,
         wallet: Contracts.State.Wallet,
     ): Promise<void> {
@@ -104,7 +104,7 @@ export class NotarizationTransactionHandler extends Handlers.TransactionHandler 
         return super.throwIfCannotBeApplied(transaction, wallet);
     }
 
-    public async apply(transaction: Interfaces.ITransaction): Promise<void> {
+    public override async apply(transaction: Interfaces.ITransaction): Promise<void> {
         await super.apply(transaction);
 
         // Line is already checked inside throwIfCannotBeApplied run by super.apply method
@@ -114,7 +114,7 @@ export class NotarizationTransactionHandler extends Handlers.TransactionHandler 
         await this.notarizationCache.put(hash, this.buildNotarization(hash, transaction.timestamp), -1);
     }
 
-    public async revert(transaction: Interfaces.ITransaction): Promise<void> {
+    public override async revert(transaction: Interfaces.ITransaction): Promise<void> {
         await super.revert(transaction);
 
         const notarizationAsset: NotarizationInterfaces.INotarizationAsset = transaction.data.asset!.notarization;
