@@ -3519,7 +3519,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@protokol/notarization-crypto", "workspace:packages/notarization-crypto"],
             ["@arkecosystem/core-test-framework", "npm:3.0.0-next.31"],
             ["@arkecosystem/crypto", "npm:3.0.0-next.31"],
-            ["@protokol/utils", "npm:1.0.0-beta.38"],
+            ["@protokol/utils", "npm:1.0.0"],
             ["@sindresorhus/tsconfig", "npm:2.0.0"],
             ["@types/jest", "npm:27.0.0"],
             ["@types/node", "npm:14.17.6"],
@@ -3573,10 +3573,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@protokol/utils", [
-        ["npm:1.0.0-beta.38", {
-          "packageLocation": "./.yarn/cache/@protokol-utils-npm-1.0.0-beta.38-cfb6f977f4-03cb6e944a.zip/node_modules/@protokol/utils/",
+        ["npm:1.0.0", {
+          "packageLocation": "./.yarn/cache/@protokol-utils-npm-1.0.0-7822b57f49-180b7e5a88.zip/node_modules/@protokol/utils/",
           "packageDependencies": [
-            ["@protokol/utils", "npm:1.0.0-beta.38"]
+            ["@protokol/utils", "npm:1.0.0"]
           ],
           "linkType": "HARD",
         }]
