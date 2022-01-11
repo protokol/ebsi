@@ -3,13 +3,15 @@
 
 # EBSI
 
-EBSI support repository
+## Solutions & Advisory
+For help surrounding the EBSI SDK or more information about Protokol’s custom solutions,
+including EBSI middleware solutions and SDKs, reach out to the team at: https://www.protokol.com/contact
 
-This work is licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+## Collaboration
 
-# Contact Us For Support And Custom Development
+Protokol are seeking partners and collaborators to work together on projects utilising EBSI technology. Reach out to the Protokol team to learn more.
 
-info@protokol.com
+Find us at: https://www.protokol.com/contact
 
 # License
 
