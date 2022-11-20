@@ -2841,7 +2841,7 @@ __metadata:
     prettier: ^2.2.0
     rimraf: ^3.0.2
     ts-jest: ~27.0.1
-    typescript: ~4.4.0
+    typescript: ~4.9.0
   dependenciesMeta:
     "@arkecosystem/core-api@":
       unplugged: true
@@ -2910,7 +2910,7 @@ __metadata:
     rimraf: ^3.0.2
     ts-jest: ~27.0.1
     typedoc: ~0.22.0
-    typescript: ~4.4.0
+    typescript: ~4.9.0
   languageName: unknown
   linkType: soft
 
@@ -2933,7 +2933,7 @@ __metadata:
     rimraf: ^3.0.2
     ts-jest: ~27.0.1
     typedoc: ~0.22.0
-    typescript: ~4.4.0
+    typescript: ~4.9.0
   languageName: unknown
   linkType: soft
 
@@ -2966,7 +2966,7 @@ __metadata:
     rimraf: ^3.0.2
     ts-jest: ~27.0.1
     typedoc: ~0.22.0
-    typescript: ~4.4.0
+    typescript: ~4.9.0
   languageName: unknown
   linkType: soft
 
@@ -12403,7 +12403,7 @@ fsevents@~2.1.2:
     ethers: ^5.0.17
     prettier: ^2.1.2
     rimraf: ^3.0.2
-    typescript: ~4.4.0
+    typescript: ~4.9.0
   languageName: unknown
   linkType: soft
 
@@ -14363,23 +14363,23 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@~4.4.0#~builtin<compat/typescript>":
-  version: 4.4.2
-  resolution: "typescript@patch:typescript@npm%3A4.4.2#~builtin<compat/typescript>::version=4.4.2&hash=32657b"
+"typescript@patch:typescript@~4.9.0#~builtin<compat/typescript>":
+  version: 4.9.3
+  resolution: "typescript@patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=32657b"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 3109ae25705746996007161cdd3271857db4f40356b894e34d4cabc216bf9e251f53e0bb6e48df2450b5e3fd948dcbee716a616a4ad4cf7251292025e6163cb1
+  checksum: c61b948d9181e52c3b12874f61e067720dd35f3e2ef0e77e5fdc314a1d15bbfd53e66a9110d3347d471632f9a4871d338df967e264fd20715431c6463f64546d
   languageName: node
   linkType: hard
 
-typescript@~4.4.0:
-  version: 4.4.2
-  resolution: "typescript@npm:4.4.2"
+typescript@~4.9.0:
+  version: 4.9.3
+  resolution: "typescript@npm:4.9.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 194e08e9d1971d667d6fd1a0554616b7022312a2319d70e81a64e502a265992061ee7817ed9a69b52bbabe7a9b85e7938cb8c11c433e40a516b277f8c4dacd51
+  checksum: 17b8f816050b412403e38d48eef0e893deb6be522d6dc7caf105e54a72e34daf6835c447735fd2b28b66784e72bfbf87f627abb4818a8e43d1fa8106396128dc
   languageName: node
   linkType: hard
 
