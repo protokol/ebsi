@@ -20,7 +20,7 @@
 		"eslint-plugin-prettier": "^4.0.0",
 		"prettier": "^2.1.2",
 		"rimraf": "^3.0.2",
-		"typescript": "~4.4.0"
+		"typescript": "~4.9.0"
 	},
 	"dependencies": {
 		"@arkecosystem/crypto": "^3.0.0-next",
