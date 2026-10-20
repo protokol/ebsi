@@ -1338,15 +1338,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hapi/address@npm:^4.0.1":
-  version: 4.1.0
-  resolution: "@hapi/address@npm:4.1.0"
-  dependencies:
-    "@hapi/hoek": ^9.0.0
-  checksum: 01e8257c9428be2a2a0441b24dcab2396a6ca20f53799fd921035b45f9f62a6014f1a0dfaf2dd10912a8b0098a9ba53c3f0863a67e7acbadddeb3d2785591cfc
-  languageName: node
-  linkType: hard
-
 "@hapi/ammo@npm:^3.1.2":
   version: 3.1.2
   resolution: "@hapi/ammo@npm:3.1.2"
@@ -1566,13 +1557,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hapi/formula@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@hapi/formula@npm:2.0.0"
-  checksum: 902da057c53027d9356de15e53a8af9ea4795d3fb78c066668b36cfca54abd2d707860469618448e7de02eb8364ead86e53b839dbd363e1aeb65ee9a195e5fad
-  languageName: node
-  linkType: hard
-
 "@hapi/hapi@npm:^18.3.1":
   version: 18.4.1
   resolution: "@hapi/hapi@npm:18.4.1"
@@ -1668,6 +1652,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hapi/hoek@npm:^9.3.0":
+  version: 9.3.0
+  resolution: "@hapi/hoek@npm:9.3.0"
+  checksum: 4771c7a776242c3c022b168046af4e324d116a9d2e1d60631ee64f474c6e38d1bb07092d898bf95c7bc5d334c5582798a1456321b2e53ca817d4e7c88bc25b43
+  languageName: node
+  linkType: hard
+
 "@hapi/iron@npm:5.x.x":
   version: 5.1.4
   resolution: "@hapi/iron@npm:5.1.4"
@@ -1716,19 +1707,6 @@ __metadata:
     "@hapi/pinpoint": ^1.0.2
     "@hapi/topo": ^3.1.3
   checksum: f0b50d66666ef7f88ec33a54eba1a1ca923eb3c4bbe6f7fb91c9d6e53f0118a0dc94d069949dc4500056b4f239bd8def3e7e845c0cdafb16fc5a5be4d4c76aaf
-  languageName: node
-  linkType: hard
-
-"@hapi/joi@npm:^17.1.0":
-  version: 17.1.1
-  resolution: "@hapi/joi@npm:17.1.1"
-  dependencies:
-    "@hapi/address": ^4.0.1
-    "@hapi/formula": ^2.0.0
-    "@hapi/hoek": ^9.0.0
-    "@hapi/pinpoint": ^2.0.0
-    "@hapi/topo": ^5.0.0
-  checksum: 803d77e19e26802860de22b8d1ae3435679844202703d20bfd6246a8c6aa00143ce48d0e8beecf55812334e8e89ac04b79301264d4a3f87c980eb0c0646b33ab
   languageName: node
   linkType: hard
 
@@ -1802,13 +1780,6 @@ __metadata:
   version: 1.0.2
   resolution: "@hapi/pinpoint@npm:1.0.2"
   checksum: d7f0733d18f0a7c89fde96a99a398c0ffe4cf489d6a2c578b5a9e93a115d9681c3f4098027765e4807501c855442e7b8218a75b781dc2fcf640d8e69415fab93
-  languageName: node
-  linkType: hard
-
-"@hapi/pinpoint@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@hapi/pinpoint@npm:2.0.0"
-  checksum: ed011c0af4eeab75f7ea2b4657f16a93e31d449a43b40a4f398e2f1a0752357af2badd7b3f3e2da9554cb9d13adb52bde123b250acef1709260954d0301eed16
   languageName: node
   linkType: hard
 
@@ -1975,7 +1946,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hapi/topo@npm:^5.0.0":
+"@hapi/topo@npm:^5.0.0, @hapi/topo@npm:^5.1.0":
   version: 5.1.0
   resolution: "@hapi/topo@npm:5.1.0"
   dependencies:
@@ -2882,7 +2853,6 @@ __metadata:
     "@arkecosystem/crypto": ^3.0.0-next
     "@hapi/boom": ^9.1.0
     "@hapi/hapi": ^20.0.2
-    "@hapi/joi": ^17.1.0
     "@protokol/notarization-crypto": "workspace:packages/notarization-crypto"
     "@protokol/notarization-transactions": "workspace:packages/notarization-transactions"
     "@sindresorhus/tsconfig": ^2.0.0
@@ -2905,6 +2875,7 @@ __metadata:
     eslint-plugin-simple-import-sort: ^7.0.0
     jest: ^27.0.1
     jest-extended: ^0.11.5
+    joi: ^17.1.1
     npm-check-updates: ~11.8.0
     prettier: ^2.1.2
     rimraf: ^3.0.2
@@ -3000,10 +2971,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sideway/address@npm:^4.1.5":
+  version: 4.1.5
+  resolution: "@sideway/address@npm:4.1.5"
+  dependencies:
+    "@hapi/hoek": ^9.0.0
+  checksum: 3e3ea0f00b4765d86509282290368a4a5fd39a7995fdc6de42116ca19a96120858e56c2c995081def06e1c53e1f8bccc7d013f6326602bec9d56b72ee2772b9d
+  languageName: node
+  linkType: hard
+
 "@sideway/formula@npm:^3.0.0":
   version: 3.0.0
   resolution: "@sideway/formula@npm:3.0.0"
   checksum: 8ae26a0ed6bc84f7310be6aae6eb9d81e97f382619fc69025d346871a707eaab0fa38b8c857e3f0c35a19923de129f42d35c50b8010c928d64aab41578580ec4
+  languageName: node
+  linkType: hard
+
+"@sideway/formula@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "@sideway/formula@npm:3.0.1"
+  checksum: e4beeebc9dbe2ff4ef0def15cec0165e00d1612e3d7cea0bc9ce5175c3263fc2c818b679bd558957f49400ee7be9d4e5ac90487e1625b4932e15c4aa7919c57a
   languageName: node
   linkType: hard
 
@@ -9609,6 +9596,19 @@ fsevents@~2.1.2:
   version: 0.15.0
   resolution: "jmespath@npm:0.15.0"
   checksum: 353bb9e69cc4c1560be0a4df43cb4020abc246e1c60cb5b55dcc76d8c858383f1633faf22ccaf6a5e09568a2077d0f4f1e989e6fcfd496b5cef87964cc8cb9e7
+  languageName: node
+  linkType: hard
+
+"joi@npm:^17.1.1":
+  version: 17.13.8
+  resolution: "joi@npm:17.13.8"
+  dependencies:
+    "@hapi/hoek": ^9.3.0
+    "@hapi/topo": ^5.1.0
+    "@sideway/address": ^4.1.5
+    "@sideway/formula": ^3.0.1
+    "@sideway/pinpoint": ^2.0.0
+  checksum: 8ba537317e0a972b053edb0f656c4bb4207e3869d585b9d7fe92c8f4ba07812780d67dd727346611d2d3aa9b499c7d7af8cfd4d8c08c3453e03d6890f2fa61ac
   languageName: node
   linkType: hard
 
