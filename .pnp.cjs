@@ -1869,14 +1869,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@hapi/address", "npm:2.1.4"]
           ],
           "linkType": "HARD",
-        }],
-        ["npm:4.1.0", {
-          "packageLocation": "./.yarn/cache/@hapi-address-npm-4.1.0-421a026867-01e8257c94.zip/node_modules/@hapi/address/",
-          "packageDependencies": [
-            ["@hapi/address", "npm:4.1.0"],
-            ["@hapi/hoek", "npm:9.2.0"]
-          ],
-          "linkType": "HARD",
         }]
       ]],
       ["@hapi/ammo", [
@@ -2103,13 +2095,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@hapi/formula", "npm:1.2.0"]
           ],
           "linkType": "HARD",
-        }],
-        ["npm:2.0.0", {
-          "packageLocation": "./.yarn/cache/@hapi-formula-npm-2.0.0-67b6c90bc9-902da057c5.zip/node_modules/@hapi/formula/",
-          "packageDependencies": [
-            ["@hapi/formula", "npm:2.0.0"]
-          ],
-          "linkType": "HARD",
         }]
       ]],
       ["@hapi/hapi", [
@@ -2207,6 +2192,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@hapi/hoek", "npm:9.2.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:9.3.0", {
+          "packageLocation": "./.yarn/cache/@hapi-hoek-npm-9.3.0-447eb8d274-4771c7a776.zip/node_modules/@hapi/hoek/",
+          "packageDependencies": [
+            ["@hapi/hoek", "npm:9.3.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["@hapi/iron", [
@@ -2256,18 +2248,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@hapi/hoek", "npm:8.5.1"],
             ["@hapi/pinpoint", "npm:1.0.2"],
             ["@hapi/topo", "npm:3.1.6"]
-          ],
-          "linkType": "HARD",
-        }],
-        ["npm:17.1.1", {
-          "packageLocation": "./.yarn/cache/@hapi-joi-npm-17.1.1-b9347a858d-803d77e19e.zip/node_modules/@hapi/joi/",
-          "packageDependencies": [
-            ["@hapi/joi", "npm:17.1.1"],
-            ["@hapi/address", "npm:4.1.0"],
-            ["@hapi/formula", "npm:2.0.0"],
-            ["@hapi/hoek", "npm:9.2.0"],
-            ["@hapi/pinpoint", "npm:2.0.0"],
-            ["@hapi/topo", "npm:5.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -2343,13 +2323,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@hapi-pinpoint-npm-1.0.2-9af5036cff-d7f0733d18.zip/node_modules/@hapi/pinpoint/",
           "packageDependencies": [
             ["@hapi/pinpoint", "npm:1.0.2"]
-          ],
-          "linkType": "HARD",
-        }],
-        ["npm:2.0.0", {
-          "packageLocation": "./.yarn/cache/@hapi-pinpoint-npm-2.0.0-d5b89ff0f0-ed011c0af4.zip/node_modules/@hapi/pinpoint/",
-          "packageDependencies": [
-            ["@hapi/pinpoint", "npm:2.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -3479,7 +3452,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@arkecosystem/crypto", "npm:3.0.0-next.31"],
             ["@hapi/boom", "npm:9.1.3"],
             ["@hapi/hapi", "npm:20.1.5"],
-            ["@hapi/joi", "npm:17.1.1"],
             ["@protokol/notarization-crypto", "workspace:packages/notarization-crypto"],
             ["@protokol/notarization-transactions", "workspace:packages/notarization-transactions"],
             ["@sindresorhus/tsconfig", "npm:2.0.0"],
@@ -3502,6 +3474,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-simple-import-sort", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:7.0.0"],
             ["jest", "virtual:550aea72281e065b8690484427a10e2c6fd3a666a7a37528dc388f46670d68c2c7de0be57d5078d6a69e4a40c0f836dcdb502401a2721086a7decb074fe74647#npm:27.0.6"],
             ["jest-extended", "npm:0.11.5"],
+            ["joi", "npm:17.13.8"],
             ["npm-check-updates", "npm:11.8.3"],
             ["prettier", "npm:2.3.2"],
             ["rimraf", "npm:3.0.2"],
@@ -3612,6 +3585,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@hapi/hoek", "npm:9.2.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:4.1.5", {
+          "packageLocation": "./.yarn/cache/@sideway-address-npm-4.1.5-a3852745c8-3e3ea0f00b.zip/node_modules/@sideway/address/",
+          "packageDependencies": [
+            ["@sideway/address", "npm:4.1.5"],
+            ["@hapi/hoek", "npm:9.2.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["@sideway/formula", [
@@ -3619,6 +3600,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@sideway-formula-npm-3.0.0-8688cb96b6-8ae26a0ed6.zip/node_modules/@sideway/formula/",
           "packageDependencies": [
             ["@sideway/formula", "npm:3.0.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:3.0.1", {
+          "packageLocation": "./.yarn/cache/@sideway-formula-npm-3.0.1-ee371b2ddf-e4beeebc9d.zip/node_modules/@sideway/formula/",
+          "packageDependencies": [
+            ["@sideway/formula", "npm:3.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -11228,6 +11216,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["joi", [
+        ["npm:17.13.8", {
+          "packageLocation": "./.yarn/cache/joi-npm-17.13.8-be9813fa0c-8ba537317e.zip/node_modules/joi/",
+          "packageDependencies": [
+            ["joi", "npm:17.13.8"],
+            ["@hapi/hoek", "npm:9.3.0"],
+            ["@hapi/topo", "npm:5.1.0"],
+            ["@sideway/address", "npm:4.1.5"],
+            ["@sideway/formula", "npm:3.0.1"],
+            ["@sideway/pinpoint", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:17.4.1", {
           "packageLocation": "./.yarn/cache/joi-npm-17.4.1-d3383ad408-508f372f3d.zip/node_modules/joi/",
           "packageDependencies": [
